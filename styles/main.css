@@ -30,6 +30,14 @@ body {
 
 .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 a { color: inherit; text-decoration: none; }
+code {
+  font-family: ui-monospace, Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+  background: rgba(166, 61, 47, 0.1);
+  color: var(--accent-deep);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
 
 /* ---------- 顶部导航 ---------- */
 .site-header {

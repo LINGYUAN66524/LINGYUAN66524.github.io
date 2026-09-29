@@ -9,7 +9,7 @@
 - **标题 / 简介**：改 `index.html` 里的 `.hero` 和 `#about` 段落。
 - **分类卡片**：改 `#archive` 里的 `.category-card`。
 - **遗物陈列**：改 `#relics` 里的 `.relic-card`，复制一份卡片就是新增一件。
-- **联系方式**：把 `#contact` 里的邮箱 `your@example.com` 换成真的。
+- **联系方式**：改 `#contact` 里的邮箱和链接。
 - **配色**：改 `styles/main.css` 顶部的 `:root` 变量（`--accent` 是主色）。
 
 ## 本地预览

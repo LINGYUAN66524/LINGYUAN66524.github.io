@@ -266,6 +266,38 @@ code {
   border-radius: 1px;
   transform: rotate(45deg);
 }
+
+/* 二级条目：课程下的具体报告（可点击） */
+.sub-list {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+}
+.sub-list li {
+  position: relative;
+  padding: 4px 0 4px 16px;
+  font-size: 13px;
+  border-bottom: none;
+}
+.sub-list li::before {
+  content: "";
+  position: absolute;
+  left: 3px; top: 50%;
+  width: 5px; height: 5px;
+  margin-top: -3px;
+  background: var(--ink-soft);
+  border-radius: 50%;
+  transform: none;
+}
+.sub-list a {
+  color: var(--accent-deep);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+.sub-list a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
 .category-tag {
   display: inline-block;
   font-size: 11px;

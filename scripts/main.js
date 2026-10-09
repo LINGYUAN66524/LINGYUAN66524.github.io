@@ -112,6 +112,7 @@
     "exp-osc": "courses",
     "exp-snd": "courses",
     chem: "courses",
+    ode: "courses",
     misc: "misc",
     fish: "misc",
     about: "about",

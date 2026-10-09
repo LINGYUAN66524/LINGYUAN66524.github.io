@@ -104,11 +104,12 @@ a:hover { text-decoration: underline; }
 .md-header__mark {
   display: inline-grid; place-items: center;
   width: 1.75rem; height: 1.75rem;
-  background: linear-gradient(135deg, #e6cd75, #b8941f);
-  color: #16233f;
-  border-radius: 0.35rem;
-  font-size: 0.95rem;
-  font-weight: 700;
+  color: #e6cd75;
+}
+.md-header__mark svg {
+  width: 1.35rem; height: 1.35rem;
+  fill: currentColor;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.28));
 }
 .md-header__title { font-size: 1.05rem; font-weight: 700; letter-spacing: 0.02em; }
 .md-header__spacer { flex: 1; }

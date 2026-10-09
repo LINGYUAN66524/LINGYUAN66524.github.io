@@ -387,3 +387,51 @@ hr { margin: 2.2rem 0; border: 0; border-top: 1px solid var(--md-border); }
   .md-content__inner h1 { font-size: 1.6rem; }
   .md-content__inner h2 { font-size: 1.25rem; }
 }
+
+/* ============================================================
+   笔记（Markdown 渲染）样式
+   ============================================================ */
+.md-note { line-height: 1.85; }
+
+.md-note ul,
+.md-note ol { margin: 0.75rem 0 0.75rem 1.5rem; }
+.md-note li { margin: 0.3rem 0; }
+.md-note li::marker { color: var(--md-primary); }
+
+.md-note blockquote {
+  margin: 1rem 0;
+  padding: 0.6rem 1rem;
+  border-left: 4px solid var(--md-accent);
+  background: rgba(78, 164, 239, 0.07);
+  border-radius: 0 0.35rem 0.35rem 0;
+  color: var(--md-text-muted);
+}
+
+.md-note code {
+  font-family: "Roboto Mono", Consolas, monospace;
+  font-size: 0.88em;
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  background: var(--md-bg-code);
+  border: 1px solid var(--md-border);
+}
+
+.md-note pre {
+  margin: 1rem 0;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 0.45rem;
+  background: var(--md-bg-code);
+  border: 1px solid var(--md-border);
+}
+.md-note pre code { padding: 0; border: 0; background: none; }
+
+.md-note hr { margin: 2.2rem 0; border-top: 1px solid var(--md-border); }
+
+.md-note a { border-bottom: 1px solid rgba(78, 164, 239, 0.4); }
+.md-note a:hover { text-decoration: none; border-bottom-color: var(--md-accent); }
+
+/* 长公式允许横向滚动，别撑破布局 */
+.katex-display { overflow-x: auto; overflow-y: hidden; padding: 0.6rem 0; }
+.katex { font-size: 1.05em; }
+

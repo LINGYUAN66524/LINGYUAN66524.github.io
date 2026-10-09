@@ -5,19 +5,20 @@
 
 /* ---------- 主题变量 ---------- */
 :root {
-  --md-primary:        #3f51b5;   /* 靛蓝 500 */
-  --md-primary-dark:   #303f9f;
-  --md-accent:         #ff4081;   /* 粉 A200 */
+  --md-primary:        #26396b;   /* 深靛蓝 · 礼服 */
+  --md-primary-dark:   #1a2850;
+  --md-accent:         #d4af37;   /* 金 · 王冠饰边 */
+  --md-water:          #5bb4d6;   /* 水元素蓝 */
 
-  --md-bg:             #ffffff;
-  --md-bg-sidebar:     #f7f8f9;
-  --md-bg-code:        #f5f5f5;
+  --md-bg:             #fafcff;
+  --md-bg-sidebar:     #f0f4fb;
+  --md-bg-code:        #e9eef7;
 
-  --md-text:           rgba(0, 0, 0, 0.87);
-  --md-text-muted:     rgba(0, 0, 0, 0.54);
-  --md-text-faint:     rgba(0, 0, 0, 0.32);
-  --md-border:         rgba(0, 0, 0, 0.07);
-  --md-shadow:         0 2px 6px rgba(0, 0, 0, 0.08);
+  --md-text:           rgba(16, 24, 48, 0.88);
+  --md-text-muted:     rgba(16, 24, 48, 0.56);
+  --md-text-faint:     rgba(16, 24, 48, 0.34);
+  --md-border:         rgba(38, 57, 107, 0.12);
+  --md-shadow:         0 2px 8px rgba(26, 40, 80, 0.10);
 
   --md-font: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", Georgia, serif;
   --md-font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
@@ -30,18 +31,18 @@
 }
 
 [data-theme="dark"] {
-  --md-primary:        #232f6e;
-  --md-primary-dark:   #1a2360;
+  --md-primary:        #101d3d;
+  --md-primary-dark:   #0a142c;
 
-  --md-bg:             #1e2124;
-  --md-bg-sidebar:     #24282c;
-  --md-bg-code:        #2b3035;
+  --md-bg:             #0d1526;
+  --md-bg-sidebar:     #121c33;
+  --md-bg-code:        #18233d;
 
-  --md-text:           rgba(255, 255, 255, 0.87);
-  --md-text-muted:     rgba(255, 255, 255, 0.60);
-  --md-text-faint:     rgba(255, 255, 255, 0.38);
-  --md-border:         rgba(255, 255, 255, 0.12);
-  --md-shadow:         0 2px 8px rgba(0, 0, 0, 0.4);
+  --md-text:           rgba(226, 236, 252, 0.90);
+  --md-text-muted:     rgba(226, 236, 252, 0.62);
+  --md-text-faint:     rgba(226, 236, 252, 0.36);
+  --md-border:         rgba(126, 200, 227, 0.18);
+  --md-shadow:         0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -62,7 +63,7 @@ body {
 }
 
 a { color: var(--md-primary-dark); text-decoration: none; }
-[data-theme="dark"] a { color: #9fa8da; }
+[data-theme="dark"] a { color: #8ab4e8; }
 a:hover { text-decoration: underline; }
 
 /* ---------- 顶部栏 ---------- */
@@ -72,6 +73,7 @@ a:hover { text-decoration: underline; }
   z-index: 40;
   background: var(--md-primary);
   color: #fff;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.55);
   box-shadow: var(--md-shadow);
 }
 .md-header__inner {
@@ -102,7 +104,8 @@ a:hover { text-decoration: underline; }
 .md-header__mark {
   display: inline-grid; place-items: center;
   width: 1.75rem; height: 1.75rem;
-  background: rgba(255, 255, 255, 0.22);
+  background: linear-gradient(135deg, #e6cd75, #b8941f);
+  color: #16233f;
   border-radius: 0.35rem;
   font-size: 0.95rem;
   font-weight: 700;
@@ -198,9 +201,9 @@ a:hover { text-decoration: underline; }
 .md-nav__link.is-active {
   color: var(--md-primary-dark);
   font-weight: 700;
-  background: rgba(63, 81, 181, 0.12);
+  background: rgba(212, 175, 55, 0.18);
 }
-[data-theme="dark"] .md-nav__link.is-active { color: #9fa8da; }
+[data-theme="dark"] .md-nav__link.is-active { color: #8ab4e8; }
 .md-nav__link.is-active::before {
   content: "";
   position: absolute;
@@ -257,7 +260,7 @@ a:hover { text-decoration: underline; }
   font-size: 1.4rem;
   margin: 2.4rem 0 0.9rem;
   padding-bottom: 0.35rem;
-  border-bottom: 1px solid var(--md-border);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.40);
 }
 .md-content__inner h3 { font-size: 1.15rem; margin: 1.7rem 0 0.7rem; }
 .md-content__inner p { margin: 0.75rem 0; }
@@ -280,7 +283,7 @@ hr { margin: 2.2rem 0; border: 0; border-top: 1px solid var(--md-border); }
   gap: 2.5rem;
   margin: 1.6rem 0 0.5rem;
   padding: 1rem 1.4rem;
-  background: var(--md-bg-code);
+  background: linear-gradient(135deg, rgba(91, 180, 214, 0.13), rgba(212, 175, 55, 0.09));
   border-radius: 0.5rem;
   flex-wrap: wrap;
 }
@@ -301,7 +304,7 @@ hr { margin: 2.2rem 0; border: 0; border-top: 1px solid var(--md-border); }
 }
 .md-filelist li:hover {
   border-color: var(--md-primary);
-  background: rgba(63, 81, 181, 0.06);
+  background: rgba(91, 180, 214, 0.10);
   transform: translateX(2px);
 }
 .md-filelist__icon { font-size: 1.05rem; }

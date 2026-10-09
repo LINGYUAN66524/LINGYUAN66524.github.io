@@ -16,13 +16,13 @@
   --md-accent:         var(--fur-sky);
 
   --md-bg:             #ffffff;
-  --md-bg-sidebar:     var(--fur-mist);
+  --md-bg-sidebar:     #f3f7fd;   /* 极浅蓝白：小面积的 #dae2ed 铺满会发灰 */
   --md-bg-code:        #eef3f9;
 
   --md-text:           #1a2130;
-  --md-text-muted:     rgba(26, 33, 48, 0.62);
-  --md-text-faint:     rgba(26, 33, 48, 0.38);
-  --md-border:         rgba(45, 60, 129, 0.15);
+  --md-text-muted:     rgba(26, 33, 48, 0.70);
+  --md-text-faint:     rgba(26, 33, 48, 0.46);
+  --md-border:         rgba(45, 60, 129, 0.18);
   --md-shadow:         0 2px 8px rgba(20, 21, 33, 0.10);
 
   --md-font: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", Georgia, serif;

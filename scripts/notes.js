@@ -58,7 +58,7 @@
   /* ---------- 4. 目录 ---------- */
   function buildToc() {
     if (!tocEl) return;
-    var heads = contentEl.querySelectorAll("h2, h3");
+    var heads = contentEl.querySelectorAll("h1, h2, h3");
     if (!heads.length) {
       tocEl.innerHTML = '<p class="md-muted">（本页暂无小节）</p>';
       return;
@@ -67,7 +67,9 @@
     Array.prototype.forEach.call(heads, function (h, i) {
       var id = "sec-" + i;
       h.id = id;
-      var level = h.tagName === "H3" ? ' style="padding-left:1.6rem"' : "";
+      var level = h.tagName === "H1" ? ' style="font-weight:700"'
+                : h.tagName === "H2" ? ' style="padding-left:1.1rem"'
+                : ' style="padding-left:2.2rem"';
       html += '<li class="md-nav__item"><a class="md-nav__link" href="#' + id + '"' + level + '>' +
               h.textContent.replace(/#$/, "").trim() + "</a></li>";
     });

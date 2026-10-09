@@ -435,3 +435,14 @@ hr { margin: 2.2rem 0; border: 0; border-top: 1px solid var(--md-border); }
 .katex-display { overflow-x: auto; overflow-y: hidden; padding: 0.6rem 0; }
 .katex { font-size: 1.05em; }
 
+/* 内容提示条（AI 生成声明等） */
+.md-notice {
+  margin: 0.9rem 0 0;
+  padding: 0.6rem 0.9rem;
+  border-left: 4px solid var(--md-accent);
+  background: rgba(78, 164, 239, 0.07);
+  border-radius: 0 0.35rem 0.35rem 0;
+  font-size: 0.88rem;
+  color: var(--md-text-muted);
+}
+

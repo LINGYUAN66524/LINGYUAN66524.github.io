@@ -114,7 +114,6 @@
     chem: "courses",
     ode: "courses",
     misc: "misc",
-    fish: "misc",
     about: "about",
     contact: "about"
   };

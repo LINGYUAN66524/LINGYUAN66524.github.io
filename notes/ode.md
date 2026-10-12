@@ -564,7 +564,7 @@ $$\frac{dp}{p}=-\frac{dy}{2y} \qquad\Longrightarrow\qquad \ln|p|=-\frac{1}{2}\ln
 
 另一支 $p<0$ 由 $c_1$ 取负号一并表示。
 
-于是 $\frac{dy}{dx}$ = $\frac{c_{1}}{\sqrt{y}}$，分离变量得 √y·dy = c₁dx，积分：
+于是 $\frac{dy}{dx}$ = $\frac{c_{1}}{\sqrt{y}}$，分离变量得 $\sqrt{y}\,\mathrm{d}y = c_{1}\mathrm{d}x$，积分：
 
 $$\frac{2}{3}y^{\frac{3}{2}}=c_1x+c_2 \qquad\Longrightarrow\qquad y=\left(c_1x+c_2\right)^{\frac{2}{3}}$$
 
@@ -702,7 +702,7 @@ $$Y-y=y'(X-x)$$
 
 求一曲线，使其上任一点处的**切线在 y 轴上的截距等于原点到该点的距离**。
 
-**解**：设曲线为 y = y(x)（不妨设 x > 0），点 (x, y) 处切线在 y 轴的截距为 y − x·y′，原点到该点的距离为 √(x² + y²)。由题意
+**解**：设曲线为 y = y(x)（不妨设 x > 0），点 (x, y) 处切线在 y 轴的截距为 y − x·y′，原点到该点的距离为 $\sqrt{x^{2}+y^{2}}$。由题意
 
 $$y-xy'=\sqrt{x^2+y^2}$$
 
@@ -718,7 +718,7 @@ $$xu'+u=u-\sqrt{1+u^2} \qquad\Longrightarrow\qquad xu'=-\sqrt{1+u^2}$$
 
 $$\int\frac{du}{\sqrt{1+u^2}}=-\int\frac{dx}{x} \qquad\Longrightarrow\qquad \ln\left(u+\sqrt{1+u^2}\right)=-\ln x+c$$
 
-即 u + √(1 + u²) = $\frac{c}{x}$。令 s = $\frac{c}{x}$，则由 √(1 + u²) = s − u 两边平方可解出
+即 $u+\sqrt{1+u^{2}} = \frac{c}{x}$。令 $s = \frac{c}{x}$，则由 $\sqrt{1+u^{2}} = s-u$ 两边平方可解出
 
 $$u=\frac{s^2-1}{2s}=\frac{c^2-x^2}{2cx}$$
 
@@ -728,7 +728,7 @@ $$y=xu=\frac{c^2-x^2}{2c}$$
 
 所求曲线是**抛物线族** y = $\frac{(c^{2} - x^{2})}{(2c)}$（由左端 $u+\sqrt{1+u^2}>0$ 恒正知 $c > 0$，故二次项系数为负，为开口向下、顶点在 y 轴上的抛物线）。
 
-> 检验：把 y = $\frac{(c^{2} - x^{2})}{(2c)}$ 代入原方程，左端 y − xy′ = $\frac{(c^{2}-x^{2})}{(2c)}$ + $\frac{x^{2}}{c}$ = $\frac{(c^{2}+x^{2})}{(2c)}$，右端 √(x²+y²) = $\sqrt{x^{2}+\frac{(c^{2}-x^{2})^{2}}{4c^{2}}}$ = $\frac{c^{2}+x^{2}}{2c}$，两边相等。
+> 检验：把 y = $\frac{(c^{2} - x^{2})}{(2c)}$ 代入原方程，左端 y − xy′ = $\frac{(c^{2}-x^{2})}{(2c)}$ + $\frac{x^{2}}{c}$ = $\frac{(c^{2}+x^{2})}{(2c)}$，右端 $\sqrt{x^{2}+y^{2}}$ = $\sqrt{x^{2}+\frac{(c^{2}-x^{2})^{2}}{4c^{2}}}$ = $\frac{c^{2}+x^{2}}{2c}$，两边相等。
 
 ### 习题 1.5
 
@@ -1082,7 +1082,7 @@ $$\Rightarrow \quad y_1=e^{\alpha x}(\cos\beta x+i\sin\beta x)$$
 
 $$y_2=e^{\alpha x}(\cos\beta x-i\sin\beta x)$$
 
-令
+由**定理 5**（实系数算子的复值解，其实部与虚部仍是该方程的解），可取
 
 $$y_1^{*}=\frac{1}{2}(y_1+y_2)=e^{\alpha x}\cos\beta x, \qquad y_2^{*}=\frac{1}{2i}(y_1-y_2)=e^{\alpha x}\sin\beta x$$
 
@@ -1114,7 +1114,7 @@ $$(r+5)(r-2)=0$$
 
 $$r=\frac{-4\pm\sqrt{16-28}}{2}=-2\pm\sqrt{3}i$$
 
-∴ 通解为 y = $e^{-2x}$(c₁cos√3x + c₂sin√3x)，c₁，c₂ 为任意常数
+∴ 通解为 $y = e^{-2x}\left(c_{1}\cos\sqrt{3}\,x+c_{2}\sin\sqrt{3}\,x\right)$，$c_{1}$，$c_{2}$ 为任意常数
 
 ### §2.2 二阶常系数非齐次线性微分方程
 

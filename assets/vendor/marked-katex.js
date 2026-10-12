@@ -34,7 +34,9 @@
             return;
           }
 
-          if (index === 0 || indexSrc.charAt(index - 1) === ' ') {
+          var prevCh = index === 0 ? '' : indexSrc.charAt(index - 1);
+          /* patched: 原来要求 $ 前面必须是空格，导致 x·$...$ 这类中文标点后的公式被略过 */
+          if (index === 0 || !/[A-Za-z0-9]/.test(prevCh)) {
             const possibleKatex = indexSrc.substring(index);
 
             if (possibleKatex.match(inlineRule)) {

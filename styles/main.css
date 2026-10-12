@@ -476,3 +476,54 @@ hr { margin: 2.2rem 0; border: 0; border-top: 1px solid var(--md-border); }
 }
 .md-gallery__item:hover img { transform: scale(1.05); }
 
+/* 图集项：悬停时底部显示名字 */
+.md-gallery__item { position: relative; }
+.md-gallery__cap {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 0.35rem 0.5rem;
+  font-family: var(--md-font-ui);
+  font-size: 0.75rem;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  opacity: 0;
+  transition: opacity 0.22s;
+}
+.md-gallery__item:hover .md-gallery__cap { opacity: 1; }
+
+/* 灯箱（点击放大） */
+.md-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 2rem;
+  background: rgba(10, 12, 20, 0.93);
+}
+.md-lightbox[hidden] { display: none; }
+.md-lightbox img {
+  max-width: 100%;
+  max-height: calc(100vh - 8rem);
+  border-radius: 0.4rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+.md-lightbox__close {
+  position: absolute;
+  top: 1rem; right: 1.2rem;
+  width: 2.4rem; height: 2.4rem;
+  border: 0; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.md-lightbox__close:hover { background: rgba(255, 255, 255, 0.32); }
+.md-lightbox__hint { color: rgba(255, 255, 255, 0.55); font-size: 0.78rem; }
+body.lightbox-open { overflow: hidden; }
+

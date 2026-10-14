@@ -111,6 +111,8 @@
     physics: "courses",
     "exp-osc": "courses",
     "exp-snd": "courses",
+    "exp-spc": "courses",
+    "exp-grt": "courses",
     chem: "courses",
     ode: "courses",
     misc: "misc",

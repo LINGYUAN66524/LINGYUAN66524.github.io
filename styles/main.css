@@ -527,3 +527,35 @@ hr { margin: 2.2rem 0; border: 0; border-top: 1px solid var(--md-border); }
 .md-lightbox__hint { color: rgba(255, 255, 255, 0.55); font-size: 0.78rem; }
 body.lightbox-open { overflow: hidden; }
 
+/* 教师评语块 */
+.md-comment {
+  margin: 1rem 0 1.4rem;
+  padding: 0.9rem 1.1rem;
+  border-left: 4px solid var(--md-accent);
+  background: rgba(78, 164, 239, 0.07);
+  border-radius: 0 0.4rem 0.4rem 0;
+  font-size: 0.9rem;
+  color: var(--md-text-muted);
+}
+.md-comment p { margin: 0.4rem 0; }
+.md-comment__label {
+  font-family: var(--md-font-ui);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--md-accent) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.md-comment-item {
+  list-style: none;
+  padding: 0 !important;
+  border: 0 !important;
+  margin: 0 !important;
+}
+.md-comment-item:hover {
+  transform: none !important;
+  background: none !important;
+  border: 0 !important;
+}
+

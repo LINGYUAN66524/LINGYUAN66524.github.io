@@ -536,28 +536,36 @@ body.lightbox-open { overflow: hidden; }
   font-size: 0.9rem;
   color: var(--md-text-muted);
 }
+/* 整行可点：summary 撑满容器 */
 .md-comment summary {
   cursor: pointer;
-  padding: 0.75rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.8rem 1.1rem;
   font-family: var(--md-font-ui);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--md-accent);
   list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   user-select: none;
+  transition: background 0.18s;
 }
 .md-comment summary::-webkit-details-marker { display: none; }
+.md-comment summary:hover { background: rgba(78, 164, 239, 0.10); }
+/* 三角放大 */
 .md-comment summary::before {
-  content: "▸";
+  content: "\25B8";
   display: inline-block;
+  flex-shrink: 0;
+  font-size: 1.05rem;
+  line-height: 1;
   transition: transform 0.2s;
 }
 .md-comment[open] summary::before { transform: rotate(90deg); }
-.md-comment summary:hover { text-decoration: underline; }
 .md-comment__body {
   padding: 0 1.1rem 0.9rem;
 }

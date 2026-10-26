@@ -882,6 +882,7 @@ body::before {
 /* 9. 尊重系统"减少动态"设置 */
 @media (prefers-reduced-motion: reduce) {
   body::before,
+  body::after,
   .md-header::after,
   .md-content__inner h1::after,
   .md-top.show { animation: none !important; }
@@ -920,3 +921,68 @@ body::before {
 }
 .md-comment-item::before,
 .md-comment-item::after { content: none !important; }
+
+/* ==== 全站固定背景：芙宁娜帽子线稿 ==== */
+/* 用 body::after 做固定背景：滚动时完全不动，内容从上面滑过。
+   注意：不能用 background-attachment: fixed（iOS Safari 支持差）。 */
+body::after {
+  content: "";
+  --art-op: 0.22;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  top: auto;
+  width: min(78vh, 52vw);
+  height: min(78vh, 52vw);
+  /* 防止伸到侧边栏下面 */
+  max-width: calc(100vw - var(--md-sidebar-w));
+  z-index: -1;               /* 在 body::before 光斑之上（::after 后绘制）、内容之下 */
+  pointer-events: none;
+  background-image: url("../assets/furina/hat-lineart.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+  /* 四周平滑淡出，去掉方形边界 */
+  -webkit-mask-image: radial-gradient(closest-side, #000 60%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 60%, transparent 100%);
+  opacity: var(--art-op);
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  animation: furina-bg-breathe 14s ease-in-out infinite;
+}
+
+/* 深色模式：反色后白底变黑，线条颜色基本不变 */
+[data-theme="dark"] body::after {
+  --art-op: 0.16;
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* 极慢呼吸：±0.03，周期 14s */
+@keyframes furina-bg-breathe {
+  0%, 100% { opacity: var(--art-op); }
+  50%      { opacity: calc(var(--art-op) + 0.03); }
+}
+
+/* 窄屏：侧边栏收起，背景铺到底、居中靠下，再压低透明度 */
+@media (max-width: 959px) {
+  body::after {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90vw;
+    height: 90vw;
+    max-width: none;
+    background-position: center bottom;
+    --art-op: 0.16;
+  }
+  [data-theme="dark"] body::after {
+    --art-op: 0.10;
+  }
+}
+
+/* 打印时隐藏 */
+@media print {
+  body::after {
+    display: none !important;
+  }
+}

@@ -884,6 +884,8 @@ body::before {
   body::before,
   .md-header::after,
   .md-content__inner h1::after,
+  .md-hero__art,
+  .md-hero::before,
   .md-top.show { animation: none !important; }
 }
 
@@ -920,3 +922,113 @@ body::before {
 }
 .md-comment-item::before,
 .md-comment-item::after { content: none !important; }
+
+/* ==== 首页标题区配图：芙宁娜帽子 ==== */
+.md-hero {
+  position: relative;
+}
+
+/* 插画背后一层很淡的水蓝径向光晕，和 body::before 光斑同风格 */
+.md-hero::before {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  right: -7rem;
+  width: 26rem;
+  height: 26rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(78, 164, 239, 0.12) 0%, rgba(78, 164, 239, 0) 68%);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  animation: furina-art-glow-in 1.2s ease-out 0.2s both;
+}
+[data-theme="dark"] .md-hero::before {
+  background: radial-gradient(circle, rgba(124, 188, 255, 0.10) 0%, rgba(124, 188, 255, 0) 70%);
+}
+
+/* 插画本体：跟着页面滚动，是排版的一部分 */
+.md-hero__art {
+  --art-opacity: 0.9;
+  position: absolute;
+  top: 0.5rem;
+  right: -5rem;
+  width: 300px;
+  height: auto;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  mix-blend-mode: multiply;
+  opacity: var(--art-opacity);
+  z-index: 0;
+  animation:
+    furina-art-in 0.9s ease-out both,
+    furina-art-float 7s ease-in-out 0.9s infinite;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* 深色模式：反色后白底变黑，用 screen 融进 #141521 */
+[data-theme="dark"] .md-hero__art {
+  --art-opacity: 0.75;
+  filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: screen;
+}
+
+/* 文字层压在插画之上，保证不遮挡 */
+.md-hero > h1,
+.md-hero > .md-lead,
+.md-hero > .md-stats {
+  position: relative;
+  z-index: 1;
+}
+
+/* 宽屏：统计卡片右侧留白，避开插画 */
+@media (min-width: 1280px) {
+  .md-hero .md-stats {
+    padding-right: 9rem;
+  }
+}
+
+/* 960–1279px：插画缩小并贴回内容区右缘 */
+@media (max-width: 1279px) {
+  .md-hero__art {
+    width: 200px;
+    right: 0;
+    --art-opacity: 0.75;
+  }
+  .md-hero::before {
+    right: -3rem;
+    width: 18rem;
+    height: 18rem;
+  }
+  .md-hero .md-stats {
+    padding-right: 0;
+  }
+}
+
+/* < 960px：侧边栏收起，插画隐藏 */
+@media (max-width: 959px) {
+  .md-hero__art,
+  .md-hero::before {
+    display: none;
+  }
+}
+
+/* 入场 */
+@keyframes furina-art-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: var(--art-opacity); transform: translateY(0); }
+}
+
+/* 循环漂浮 */
+@keyframes furina-art-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-5px) rotate(1deg); }
+}
+
+/* 光晕入场 */
+@keyframes furina-art-glow-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

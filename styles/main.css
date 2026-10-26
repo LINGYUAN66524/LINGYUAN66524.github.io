@@ -1090,3 +1090,58 @@ body::after {
     opacity: 1;
   }
 }
+
+/* ==== 修复：深色模式导航文字被 [data-theme="dark"] a 染成亮蓝 ==== */
+/* 该规则优先级 (0,1,1) 高于 .md-tabs__link / .md-nav__link (0,1,0)，这里按原设计补回 */
+[data-theme="dark"] .md-tabs__link { color: rgba(255, 255, 255, 0.78); }
+[data-theme="dark"] .md-tabs__link:hover,
+[data-theme="dark"] .md-tabs__link.is-active { color: #fff; }
+
+[data-theme="dark"] .md-nav__link { color: var(--md-text-muted); }
+[data-theme="dark"] .md-nav__link:hover { color: #9fd0ff; }
+[data-theme="dark"] .md-nav__link.is-active { color: #7cbcff; }
+
+/* h2 水滴宝石与标题文字之间留出间距 */
+.md-content__inner h2 { padding-left: 1.5rem; }
+.md-content__inner h2::before { top: 0.38em; }
+
+/* 修复深色模式：1) h1 纹饰被第 834 行高优先级选择器覆盖；2) .md-stats 多背景图在继承 background-size 时第一层铺满全卡 */
+[data-theme="dark"] .md-content__inner h1::after {
+  width: 240px;
+  max-width: 100%;
+  height: 28px;
+  margin: 0.75rem 0 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='28' viewBox='0 0 240 28'%3E%3Cg fill='none' stroke='%238f7748' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M4 15c11 0 15-8 24-7 6 .8 7 6.5 2 7.6-3.4.7-4.6-3.2-1-4.4'/%3E%3Cpath d='M34 15c7 0 9-3.5 13-2.5'/%3E%3Cpath d='M236 15c-11 0-15-8-24-7-6 .8-7 6.5-2 7.6 3.4.7 4.6-3.2 1-4.4'/%3E%3Cpath d='M206 15c-7 0-9-3.5-13-2.5'/%3E%3Cpath d='M120 3c6.5 7.5 10.5 10.5 10.5 13.5a10.5 10.5 0 0 1-21 0C109.5 13.5 113.5 10.5 120 3z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 240px 28px;
+  opacity: 0.9;
+  animation: none;
+}
+
+[data-theme="dark"] .md-stats {
+  background-repeat: no-repeat;
+  background-size:
+    16px 1px, 1px 16px,
+    16px 1px, 1px 16px,
+    16px 1px, 1px 16px,
+    16px 1px, 1px 16px,
+    cover;
+  background-position:
+    left top, left top,
+    right top, right top,
+    left bottom, left bottom,
+    right bottom, right bottom,
+    center;
+}
+
+/* 深色模式下统计数字改为亮蓝渐变，避免 --md-primary (#141521) 与深色卡片背景融在一起看不清 */
+[data-theme="dark"] .md-stat__num {
+  background: linear-gradient(120deg, var(--fur-mist) 0%, var(--md-accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+

@@ -986,3 +986,78 @@ body::after {
     display: none !important;
   }
 }
+
+/* ==== 芙宁娜主题：枫丹式装饰细节 ==== */
+:root {
+  --fur-gold: #c9a96e;
+}
+
+/* ---- h1：对称新艺术风格纹饰（卷草线条 + 中间水滴），取代原来的波浪线 ---- */
+.md-content__inner h1::after {
+  content: "";
+  display: block;
+  width: 240px;
+  max-width: 100%;
+  height: 28px;
+  margin: 0.75rem 0 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='28' viewBox='0 0 240 28'%3E%3Cg fill='none' stroke='%23c9a96e' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M4 15c11 0 15-8 24-7 6 .8 7 6.5 2 7.6-3.4.7-4.6-3.2-1-4.4'/%3E%3Cpath d='M34 15c7 0 9-3.5 13-2.5'/%3E%3Cpath d='M236 15c-11 0-15-8-24-7-6 .8-7 6.5-2 7.6 3.4.7 4.6-3.2 1-4.4'/%3E%3Cpath d='M206 15c-7 0-9-3.5-13-2.5'/%3E%3Cpath d='M120 3c6.5 7.5 10.5 10.5 10.5 13.5a10.5 10.5 0 0 1-21 0C109.5 13.5 113.5 10.5 120 3z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 240px 28px;
+  opacity: 0.85;
+  animation: none;
+}
+
+/* ---- h2：菱形标记换成水滴宝石 ---- */
+.md-content__inner h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 18px;
+  height: 22px;
+  border-radius: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='22' viewBox='0 0 18 22'%3E%3Cdefs%3E%3ClinearGradient id='fg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237cbcff'/%3E%3Cstop offset='1' stop-color='%232d3c81'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M9 1c3.4 6 7 9 7 12a7 7 0 0 1-14 0c0-3 3.6-6 7-12z' fill='url(%23fg)'/%3E%3Cellipse cx='5.7' cy='15' rx='1.7' ry='2.4' fill='%23ffffff' opacity='0.55'/%3E%3C/svg%3E") no-repeat center / contain;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ---- .md-stats：四角 L 形金色角花（剧院包厢式） ---- */
+.md-stats {
+  --cg: var(--fur-gold);
+  background-image:
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(135deg, rgba(78,164,239,0.13) 0%, rgba(218,226,237,0.50) 100%);
+  background-repeat: no-repeat;
+  background-size:
+    16px 1px, 1px 16px,
+    16px 1px, 1px 16px,
+    16px 1px, 1px 16px,
+    16px 1px, 1px 16px,
+    cover;
+  background-position:
+    left top, left top,
+    right top, right top,
+    left bottom, left bottom,
+    right bottom, right bottom,
+    center;
+}
+[data-theme="dark"] .md-stats {
+  background-image:
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(var(--cg), var(--cg)),
+    linear-gradient(135deg, rgba(78,164,239,0.14) 0%, rgba(26,28,43,0.55) 100%);
+}

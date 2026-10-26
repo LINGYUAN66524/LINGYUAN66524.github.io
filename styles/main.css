@@ -716,3 +716,63 @@ body.lightbox-open { overflow: hidden; }
 /* 回到顶部：渐变 */
 .md-top { background: linear-gradient(135deg, var(--md-primary), var(--md-primary-dark)); }
 .md-top:hover { background: linear-gradient(135deg, var(--md-accent), var(--md-primary)); }
+
+/* ==== 水主题装饰层 ==== */
+/* 分隔线改水波纹 */
+.md-content__inner hr {
+  border: 0;
+  height: 16px;
+  margin: 2.2rem 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='16' viewBox='0 0 48 16'%3E%3Cpath d='M0 8 Q 12 1 24 8 T 48 8' fill='none' stroke='%234ea4ef' stroke-width='1.4' opacity='0.45'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center;
+}
+[data-theme="dark"] .md-content__inner hr { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='16' viewBox='0 0 48 16'%3E%3Cpath d='M0 8 Q 12 1 24 8 T 48 8' fill='none' stroke='%237cbcff' stroke-width='1.4' opacity='0.35'/%3E%3C/svg%3E"); }
+
+/* h1 下方渐隐水线 */
+.md-content__inner h1::after {
+  content: "";
+  display: block;
+  width: 4.5rem;
+  height: 5px;
+  margin-top: 0.7rem;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--md-accent) 0%, rgba(78,164,239,0) 100%);
+}
+
+/* h2 竖条改菱形 */
+.md-content__inner h2 { padding-left: 1rem; }
+.md-content__inner h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 9px;
+  height: 9px;
+  border-radius: 1.5px;
+  background: var(--md-accent);
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 3px rgba(78,164,239,0.12);
+}
+
+/* 文件列表左缘一道水色细条 */
+.md-filelist li { position: relative; overflow: hidden; }
+.md-filelist li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--md-accent), var(--md-primary));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.md-filelist li:hover::before { opacity: 1; }
+
+/* 评语/提示块：左缘也统一水色渐变 */
+.md-notice, .md-comment {
+  border-left-color: transparent;
+  background-image: linear-gradient(90deg, rgba(78,164,239,0.16) 0%, rgba(78,164,239,0.05) 100%);
+}
+.md-notice::before, .md-comment::before {
+  content: "";
+}

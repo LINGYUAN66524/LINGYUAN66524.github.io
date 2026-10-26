@@ -22,10 +22,52 @@
     try { localStorage.setItem(THEME_KEY, t); } catch (e) {}
   }
 
+  // 芒性 = 浅色（明亮·白金）；荒性 = 深色（深海·蓝黑）
+  function themeLabel(t) {
+    return t === "dark"
+      ? "当前：荒性（深海·蓝黑）· 点击切换"
+      : "当前：芒性（明亮·白金）· 点击切换";
+  }
+
+  function refreshToggleLabel() {
+    if (!themeToggle) return;
+    themeToggle.setAttribute("aria-label", "切换芒/荒");
+    themeToggle.setAttribute(
+      "title",
+      themeLabel(root.getAttribute("data-theme") === "dark" ? "dark" : "light")
+    );
+  }
+
+  // 切换时从按钮位置扩散一圈水波（View Transitions API；不支持则直接切）
+  function switchTheme() {
+    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    var apply = function () {
+      setTheme(next);
+      refreshToggleLabel();
+    };
+
+    if (!document.startViewTransition || !themeToggle) {
+      apply();
+      return;
+    }
+
+    var r = themeToggle.getBoundingClientRect();
+    var cx = r.left + r.width / 2;
+    var cy = r.top + r.height / 2;
+    var radius = Math.hypot(
+      Math.max(cx, window.innerWidth - cx),
+      Math.max(cy, window.innerHeight - cy)
+    );
+    root.style.setProperty("--vt-x", cx + "px");
+    root.style.setProperty("--vt-y", cy + "px");
+    root.style.setProperty("--vt-r", radius + "px");
+
+    document.startViewTransition(apply);
+  }
+
   if (themeToggle) {
-    themeToggle.addEventListener("click", function () {
-      setTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
-    });
+    themeToggle.addEventListener("click", switchTheme);
+    refreshToggleLabel();
   }
 
   /* ---------- 2. 移动端抽屉 ---------- */

@@ -885,6 +885,9 @@ body::before {
   body::after,
   .md-header::after,
   .md-content__inner h1::after,
+  .md-hero__art,
+  .md-hero::before,
+  ::view-transition-new(root),
   .md-top.show { animation: none !important; }
 }
 
@@ -1060,4 +1063,30 @@ body::after {
     linear-gradient(var(--cg), var(--cg)),
     linear-gradient(var(--cg), var(--cg)),
     linear-gradient(135deg, rgba(78,164,239,0.14) 0%, rgba(26,28,43,0.55) 100%);
+}
+
+/* ==== 芙宁娜主题：芒 / 荒 切换 ==== */
+/* 深色（荒性）里香槟金调暗一档，避免刺眼 */
+[data-theme="dark"] {
+  --fur-gold: #8f7748;
+}
+
+/* 主题切换：新画面从按钮位置扩散成一圈水波 */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-new(root) {
+  animation: furina-theme-wave 0.55s ease-out;
+}
+@keyframes furina-theme-wave {
+  from {
+    clip-path: circle(0 at var(--vt-x, 50%) var(--vt-y, 50%));
+    opacity: 0.55;
+  }
+  to {
+    clip-path: circle(var(--vt-r, 150%) at var(--vt-x, 50%) var(--vt-y, 50%));
+    opacity: 1;
+  }
 }

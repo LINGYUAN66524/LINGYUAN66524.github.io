@@ -902,4 +902,21 @@ body::before {
 .md-comment__body p { margin: 0.28rem 0; }
 
 /* 评语条目本身不额外占高 */
-.md-comment-item { margin: 0 !important; }
+/* 评语条目：完全脱离 .md-filelist li 的卡片样式 */
+.md-comment-item {
+  list-style: none;
+  display: block;
+  padding: 0 !important;
+  border: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+.md-comment-item:hover {
+  transform: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.md-comment-item::before,
+.md-comment-item::after { content: none !important; }

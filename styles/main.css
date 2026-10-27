@@ -995,32 +995,17 @@ body::after {
   --fur-gold: #c9a96e;
 }
 
-/* ---- h1：对称新艺术风格纹饰（卷草线条 + 中间水滴），取代原来的波浪线 ---- */
-.md-content__inner h1::after {
-  content: "";
-  display: block;
-  width: 240px;
-  max-width: 100%;
-  height: 28px;
-  margin: 0.75rem 0 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='28' viewBox='0 0 240 28'%3E%3Cg fill='none' stroke='%23c9a96e' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M4 15c11 0 15-8 24-7 6 .8 7 6.5 2 7.6-3.4.7-4.6-3.2-1-4.4'/%3E%3Cpath d='M34 15c7 0 9-3.5 13-2.5'/%3E%3Cpath d='M236 15c-11 0-15-8-24-7-6 .8-7 6.5-2 7.6 3.4.7 4.6-3.2 1-4.4'/%3E%3Cpath d='M206 15c-7 0-9-3.5-13-2.5'/%3E%3Cpath d='M120 3c6.5 7.5 10.5 10.5 10.5 13.5a10.5 10.5 0 0 1-21 0C109.5 13.5 113.5 10.5 120 3z'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 240px 28px;
-  opacity: 0.85;
-  animation: none;
-}
-
-/* ---- h2：菱形标记换成水滴宝石 ---- */
+/* ---- h2：菱形标记换成枫丹水神之眼式水滴宝石（金银镶边 + 上下棱角菱形 + 浪花镂纹 + 水蓝星芒宝石） ---- */
+.md-content__inner h2 { padding-left: 1.55rem; }
 .md-content__inner h2::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.5em;
-  width: 18px;
-  height: 22px;
+  top: 0.22em;
+  width: 20px;
+  height: 30px;
   border-radius: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='22' viewBox='0 0 18 22'%3E%3Cdefs%3E%3ClinearGradient id='fg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237cbcff'/%3E%3Cstop offset='1' stop-color='%232d3c81'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M9 1c3.4 6 7 9 7 12a7 7 0 0 1-14 0c0-3 3.6-6 7-12z' fill='url(%23fg)'/%3E%3Cellipse cx='5.7' cy='15' rx='1.7' ry='2.4' fill='%23ffffff' opacity='0.55'/%3E%3C/svg%3E") no-repeat center / contain;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='56' viewBox='0 0 36 56'%3E%3Cdefs%3E%3ClinearGradient id='fm' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f7eed7'/%3E%3Cstop offset='0.45' stop-color='%23d4b475'/%3E%3Cstop offset='1' stop-color='%237e6333'/%3E%3C/linearGradient%3E%3ClinearGradient id='fg' x1='0.2' y1='0.1' x2='0.85' y2='0.95'%3E%3Cstop offset='0' stop-color='%23b5ecff'/%3E%3Cstop offset='0.45' stop-color='%234ea4ef'/%3E%3Cstop offset='1' stop-color='%231b2b68'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='18,1 22,5.5 18,10.5 14,5.5' fill='url(%23fm)' stroke='%2346371c' stroke-width='0.9'/%3E%3Cpolygon points='18,1 22,5.5 18,5.5' fill='%23ffffff' opacity='0.6'/%3E%3Cpolygon points='18,43.5 23,48.5 18,55 13,48.5' fill='url(%23fm)' stroke='%2346371c' stroke-width='0.9'/%3E%3Cpolygon points='18,43.5 23,48.5 18,48.5' fill='%23ffffff' opacity='0.55'/%3E%3Cpath d='M18 10 C25 21 31 28 31 35 A13 13 0 0 1 5 35 C5 28 11 21 18 10 Z' fill='url(%23fm)' stroke='%2346371c' stroke-width='1'/%3E%3Cpath d='M18 13.5 C23.5 22.5 28 28.5 28 34.8 A10 10 0 0 1 8 34.8 C8 28.5 12.5 22.5 18 13.5 Z' fill='url(%23fg)' stroke='%2323336c' stroke-width='0.8'/%3E%3Cpath d='M18 14.5 L12 29 L18 25 L23 31 Z' fill='%23ffffff' opacity='0.22'/%3E%3Cpath d='M15 44 C14.5 34.5 21 28 28 29.5 C22.5 30.8 18.2 35.8 18.5 44.2 Z' fill='url(%23fm)' stroke='%2346371c' stroke-width='0.75'/%3E%3Cpath d='M21 43.8 C20.8 37.5 24.5 33.5 28.2 34.2 C25 35.5 23.2 38.8 23.6 43.2 Z' fill='url(%23fm)' stroke='%2346371c' stroke-width='0.75'/%3E%3Cpath d='M15.5 22 L16.8 25.5 L20.3 26.8 L16.8 28.1 L15.5 31.6 L14.2 28.1 L10.7 26.8 L14.2 25.5 Z' fill='%23ffffff' opacity='0.92'/%3E%3Ccircle cx='12' cy='35' r='1.2' fill='%23ffffff' opacity='0.75'/%3E%3Ccircle cx='18' cy='43.8' r='1.5' fill='%23fff6dc' stroke='%2346371c' stroke-width='0.6'/%3E%3C/svg%3E") no-repeat center / contain;
   transform: none;
   box-shadow: none;
 }
@@ -1063,6 +1048,19 @@ body::after {
     linear-gradient(var(--cg), var(--cg)),
     linear-gradient(var(--cg), var(--cg)),
     linear-gradient(135deg, rgba(78,164,239,0.14) 0%, rgba(26,28,43,0.55) 100%);
+  background-repeat: no-repeat;
+  background-size:
+    16px 1px, 1px 16px,
+    16px 1px, 1px 16px,
+    16px 1px, 1px 16px,
+    16px 1px, 1px 16px,
+    cover;
+  background-position:
+    left top, left top,
+    right top, right top,
+    left bottom, left bottom,
+    right bottom, right bottom,
+    center;
 }
 
 /* ==== 芙宁娜主题：芒 / 荒 切换 ==== */
@@ -1101,40 +1099,6 @@ body::after {
 [data-theme="dark"] .md-nav__link:hover { color: #9fd0ff; }
 [data-theme="dark"] .md-nav__link.is-active { color: #7cbcff; }
 
-/* h2 水滴宝石与标题文字之间留出间距 */
-.md-content__inner h2 { padding-left: 1.5rem; }
-.md-content__inner h2::before { top: 0.38em; }
-
-/* 修复深色模式：1) h1 纹饰被第 834 行高优先级选择器覆盖；2) .md-stats 多背景图在继承 background-size 时第一层铺满全卡 */
-[data-theme="dark"] .md-content__inner h1::after {
-  width: 240px;
-  max-width: 100%;
-  height: 28px;
-  margin: 0.75rem 0 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='28' viewBox='0 0 240 28'%3E%3Cg fill='none' stroke='%238f7748' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M4 15c11 0 15-8 24-7 6 .8 7 6.5 2 7.6-3.4.7-4.6-3.2-1-4.4'/%3E%3Cpath d='M34 15c7 0 9-3.5 13-2.5'/%3E%3Cpath d='M236 15c-11 0-15-8-24-7-6 .8-7 6.5-2 7.6 3.4.7 4.6-3.2 1-4.4'/%3E%3Cpath d='M206 15c-7 0-9-3.5-13-2.5'/%3E%3Cpath d='M120 3c6.5 7.5 10.5 10.5 10.5 13.5a10.5 10.5 0 0 1-21 0C109.5 13.5 113.5 10.5 120 3z'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 240px 28px;
-  opacity: 0.9;
-  animation: none;
-}
-
-[data-theme="dark"] .md-stats {
-  background-repeat: no-repeat;
-  background-size:
-    16px 1px, 1px 16px,
-    16px 1px, 1px 16px,
-    16px 1px, 1px 16px,
-    16px 1px, 1px 16px,
-    cover;
-  background-position:
-    left top, left top,
-    right top, right top,
-    left bottom, left bottom,
-    right bottom, right bottom,
-    center;
-}
-
 /* 深色模式下统计数字改为亮蓝渐变，避免 --md-primary (#141521) 与深色卡片背景融在一起看不清 */
 [data-theme="dark"] .md-stat__num {
   background: linear-gradient(120deg, var(--fur-mist) 0%, var(--md-accent) 100%);
@@ -1142,6 +1106,3 @@ body::after {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-
-

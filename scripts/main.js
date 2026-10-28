@@ -158,6 +158,7 @@
     "exp-fg": "courses",
     "exp-gs": "courses",
     "exp-mul": "courses",
+    "exp-dc": "courses",
     "exp-va": "courses",
     "exp-src": "courses",
     "exp-ac": "courses",

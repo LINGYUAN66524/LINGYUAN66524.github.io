@@ -1106,3 +1106,31 @@ body::after {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* ==== 芙宁娜主题：图集页顶部横幅 ==== */
+.md-banner {
+  margin: 0 0 1.5rem;
+  line-height: 0;
+  /* 上下边缘平滑淡出，避免深色图在白底上切出一条硬边 */
+  -webkit-mask-image: linear-gradient(180deg,
+    transparent 0%, #000 10%, #000 90%, transparent 100%);
+  mask-image: linear-gradient(180deg,
+    transparent 0%, #000 10%, #000 90%, transparent 100%);
+}
+.md-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* 窄屏时横幅过高，压一压 */
+@media (max-width: 960px) {
+  .md-banner {
+    margin-bottom: 1rem;
+    -webkit-mask-image: linear-gradient(180deg,
+      transparent 0%, #000 12%, #000 88%, transparent 100%);
+    mask-image: linear-gradient(180deg,
+      transparent 0%, #000 12%, #000 88%, transparent 100%);
+  }
+}

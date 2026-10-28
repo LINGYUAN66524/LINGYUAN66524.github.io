@@ -1134,3 +1134,20 @@ body::after {
       transparent 0%, #000 12%, #000 88%, transparent 100%);
   }
 }
+
+/* ==== 模电实验空状态 ==== */
+/* 没有条目时显示一句审判庭口吻的占位，不占大块空间 */
+.md-filelist .md-empty {
+  list-style: none;
+  padding: 0.8rem 0.2rem;
+  color: var(--md-muted, #6b7280);
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.md-filelist .md-empty::before,
+.md-filelist .md-empty::after {
+  content: none !important;
+}

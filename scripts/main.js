@@ -162,6 +162,7 @@
     snaps: "misc",
     chem: "courses",
     ode: "courses",
+    modian: "courses",
     misc: "misc",
     about: "about",
     contact: "about"

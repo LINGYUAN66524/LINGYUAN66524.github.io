@@ -76,8 +76,16 @@
               <li class="md-nav__item"><a class="md-nav__link" href="#exp-tc">铁磁材料居里温度测量</a></li>
                 </ul>
               </li>
-              <li class="md-nav__item">
-                <a class="md-nav__link" href="#modian">模拟电子技术实验</a>
+              <li class="md-nav__item md-nav__item--nested is-open">
+                <button class="md-nav__toggle" aria-expanded="true">
+                  <span>模拟电子技术实验</span>
+                  <svg class="md-nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+                </button>
+                <ul class="md-nav__list">
+                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-va">电路元件特性曲线</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-src">含源一端口网络</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-ac">交流无源一端口</a></li>
+                </ul>
               </li>
               <li class="md-nav__item">
                 <a class="md-nav__link" href="#ode">常微分方程</a>
@@ -122,11 +130,11 @@
 
         <div class="md-stats">
           <div class="md-stat">
-            <span class="md-stat__num">4</span>
+            <span class="md-stat__num">9</span>
             <span class="md-stat__label">已归档遗物</span>
           </div>
           <div class="md-stat">
-            <span class="md-stat__num">2</span>
+            <span class="md-stat__num">4</span>
             <span class="md-stat__label">课程分类</span>
           </div>
           <div class="md-stat">
@@ -200,24 +208,36 @@
         </ul>
 
         <h3 id="modian">模拟电子技术实验<span class="md-anchor">#</span></h3>
+        <p class="md-notice">报告顶部的姓名、学号已做遮蔽处理；成绩按 5 分制记录。</p>
 
         <ul class="md-filelist" id="modianList">
-          <li class="md-empty">暂无记录 · 本次审判暂无结果</li>
-          <!-- 加一条实验时，把下面整段复制出来改：
-               1. 删掉上面 md-empty 那一行
-               2. 分数写在链接文字括号里，评语改 details 里的正文
-          <li id="mexp-1">
+          <li id="exp-va">
             <span class="md-filelist__icon">📄</span>
-            <a href="files/模电-实验名称.pdf" target="_blank" rel="noopener">实验名称（95分）</a>
-            <span class="md-filelist__meta">PDF</span>
+            <a href="files/模电-电路元件特性曲线的伏安测量法和示波器观测法.pdf" target="_blank" rel="noopener">电路元件特性曲线的伏安测量法和示波器观测法（4.0/5）</a>
+            <span class="md-filelist__meta">PDF · 11 页</span>
           </li>
           <li class="md-comment-item">
             <details class="md-comment">
-              <summary>教师评语 · 实验名称</summary>
-              <div class="md-comment__body"><p>评语正文。</p></div>
+              <summary>教师评语 · 电路元件特性曲线的伏安测量法和示波器观测法</summary>
+              <div class="md-comment__body"><p>评语待补充。</p></div>
             </details>
           </li>
-          -->
+          <li id="exp-src">
+            <span class="md-filelist__icon">📄</span>
+            <a href="files/模电-含源一端口网络等效参数和外特性的测量.pdf" target="_blank" rel="noopener">含源一端口网络等效参数和外特性的测量（4.9/5）</a>
+            <span class="md-filelist__meta">PDF · 7 页</span>
+          </li>
+          <li class="md-comment-item">
+            <details class="md-comment">
+              <summary>教师评语 · 含源一端口网络等效参数和外特性的测量</summary>
+              <div class="md-comment__body"><p>评语待补充。</p></div>
+            </details>
+          </li>
+          <li id="exp-ac">
+            <span class="md-filelist__icon">📄</span>
+            <a href="files/模电-交流无源一端口电路等效参数的测量研究.pdf" target="_blank" rel="noopener">交流无源一端口电路等效参数的测量研究（待评分）</a>
+            <span class="md-filelist__meta">PDF · 9 页</span>
+          </li>
         </ul>
 
         <h3 id="ode">常微分方程（个人笔记）<span class="md-anchor">#</span></h3>

@@ -603,10 +603,101 @@ body.lightbox-open { overflow: hidden; }
   .md-banner img { height: 160px; }
 }
 
+
+/* ==== 毛玻璃：顶栏 / 标签栏 / 侧栏 ==== */
+.md-header {
+  background: rgba(45, 60, 129, 0.90);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  backdrop-filter: blur(14px) saturate(150%);
+}
+.md-tabs {
+  background: rgba(31, 43, 94, 0.88);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  backdrop-filter: blur(14px) saturate(150%);
+}
+.md-sidebar {
+  background: rgba(243, 247, 253, 0.82);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+[data-theme="dark"] .md-header { background: rgba(20, 21, 33, 0.92); }
+[data-theme="dark"] .md-tabs { background: rgba(13, 14, 22, 0.90); }
+[data-theme="dark"] .md-sidebar { background: rgba(26, 28, 43, 0.82); }
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .md-header { background: var(--md-primary); }
+  .md-tabs { background: var(--md-primary-dark); }
+  .md-sidebar { background: var(--md-bg-sidebar); }
+}
+
+
+/* 文件行给实底，帽子的线稿只在空白处露出来，不压在文字底下 */
+.md-filelist li {
+  background: var(--md-bg);
+}
+[data-theme="dark"] .md-filelist li { background: #1a1c2b; }
+.md-table { background: var(--md-bg); }
+
+/* 提示条 / 评语块也做一层薄毛玻璃 */
+.md-notice,
+.md-comment {
+  background: rgba(255, 255, 255, 0.66);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+[data-theme="dark"] .md-notice,
+[data-theme="dark"] .md-comment { background: rgba(20, 21, 33, 0.55); }
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .md-notice, .md-comment { background: var(--md-bg-code); }
+}
+
+/* ==== 全站固定背景：芙宁娜帽子线稿 ==== */
+/* 固定定位，滚动时不动；左右下角留白，用径向遮罩把方形边界化掉。 */
+body::after {
+  content: "";
+  --art-op: 0.18;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: min(72vh, 48vw);
+  height: min(72vh, 48vw);
+  z-index: -1;
+  pointer-events: none;
+  background: url("../assets/furina/hat-lineart.jpg") right bottom / contain no-repeat;
+  -webkit-mask-image: radial-gradient(closest-side, #000 58%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 58%, transparent 100%);
+  opacity: var(--art-op);
+  animation: furina-bg-breathe 14s ease-in-out infinite;
+}
+[data-theme="dark"] body::after {
+  --art-op: 0.14;
+  filter: invert(1) hue-rotate(180deg);
+}
+
+@keyframes furina-bg-breathe {
+  0%, 100% { opacity: var(--art-op); }
+  50%      { opacity: calc(var(--art-op) + 0.03); }
+}
+
+@media (max-width: 959px) {
+  body::after {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 86vw;
+    height: 86vw;
+    background-position: center bottom;
+    --art-op: 0.14;
+  }
+  [data-theme="dark"] body::after { --art-op: 0.10; }
+}
+
 /* 尊重系统的减少动态设置：本项目本就没有进场动画，这里只兜底 */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition-duration: 0.01ms !important; }
+  body::after { animation: none; }
 }
 
 @media print {

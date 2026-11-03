@@ -4,13 +4,13 @@
 
 个人主页仓库 `LINGYUAN66524.github.io` 的源码，线上地址：<https://lingyuan66524.github.io>
 
-纯 **HTML + CSS + JS**，零依赖、零构建，改完推到 GitHub 就能上线。版式是 MkDocs Material 那一路的三栏布局，扁平化处理过：没有渐变、没有投影、没有进场动画。
+纯 **HTML + CSS + JS**，零依赖、零构建，改完推到 GitHub 就能上线。版式是 MkDocs Material 那一路：顶栏、标签栏和侧栏是半透明毛玻璃，右下角压一张芙宁娜帽子的线稿，其余保持扁平（没有渐变、投影、进场动画）。
 
 ## 目录结构
 
 ```
 LINGYUAN66524.github.io/
-├── index.html          # 主页（欢迎语）
+├── index.html          # 主页（欢迎语，不显示侧栏）
 ├── courses.html        # 课程作业（实验报告列表 + 教师评语）
 ├── misc.html           # 杂项收藏（图集入口）
 ├── about.html          # 关于（站点说明 + 联系方式）

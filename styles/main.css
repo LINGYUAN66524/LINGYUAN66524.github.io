@@ -519,8 +519,8 @@ body.lightbox-open { overflow: hidden; }
 
 /* 教师评语块（可折叠） */
 .md-comment {
-  margin: 0.9rem 0 1.2rem;
-  border-left: 4px solid var(--md-accent);
+  margin: 0;
+  border-left: 3px solid var(--md-accent);
   background: rgba(255, 255, 255, 0.66);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -536,9 +536,9 @@ body.lightbox-open { overflow: hidden; }
   gap: 0.6rem;
   width: 100%;
   box-sizing: border-box;
-  padding: 0.8rem 1.1rem;
+  padding: 0.5rem 0.9rem;
   font-family: var(--md-font-ui);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--md-accent);
@@ -559,18 +559,17 @@ body.lightbox-open { overflow: hidden; }
 }
 .md-comment[open] summary::before { transform: rotate(90deg); }
 .md-comment__body {
-  padding: 0 1.1rem 0.9rem;
+  padding: 0 0.9rem 0.7rem;
 }
-.md-comment__body p { margin: 0.4rem 0; }
+.md-comment__body p { margin: 0.35rem 0; }
 
-/* 评语条目：不沿用文件行的卡片样式 */
-.md-comment-item {
-  list-style: none;
+/* 评语条目：不再套文件行的卡片样式，整体比报告条窄一圈 */
+.md-filelist li.md-comment-item {
   display: block;
   padding: 0;
   border: 0;
   background: none;
-  margin: 0;
+  margin: 0.15rem 1.5rem 0.85rem;
 }
 .md-comment-item::before,
 .md-comment-item::after { content: none; }

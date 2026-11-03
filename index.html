@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>躺平摸鱼日记</title>
-  <meta name="description" content="在蓝色大肥鱼的辅助（？）下搭建而成，仓库内容由大肥鱼识别我的课程内容生成，个人粗略审核，仅供参考。" />
+  <meta name="description" content="个人学习存档：课程实验报告、笔记与图集。" />
   <link rel="stylesheet" href="styles/main.css" />
   <script>
     // 尽早套用主题，避免刷新闪白
@@ -16,7 +16,7 @@
     })();
   </script>
 </head>
-<body><!-- ===== 顶部栏 ===== -->
+<body>
   <header class="md-header">
     <div class="md-header__inner">
       <button class="md-header__icon md-header__drawer" id="drawerToggle"
@@ -24,7 +24,7 @@
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
       </button>
 
-      <a class="md-header__logo" href="#home">
+      <a class="md-header__logo" href="index.html">
         <span class="md-header__title">躺平摸鱼日记</span>
       </a>
 
@@ -36,30 +36,27 @@
       </button>
     </div>
 
-    <!-- 标签栏 -->
     <nav class="md-tabs" aria-label="主导航">
       <div class="md-tabs__inner">
-        <a class="md-tabs__link is-active" href="#home">主页</a>
-        <a class="md-tabs__link" href="#courses">课程作业</a>
-        <a class="md-tabs__link" href="#misc">杂项收藏</a>
-        <a class="md-tabs__link" href="#about">关于</a>
+        <a class="md-tabs__link is-active" href="index.html">主页</a>
+        <a class="md-tabs__link" href="courses.html">课程作业</a>
+        <a class="md-tabs__link" href="misc.html">杂项收藏</a>
+        <a class="md-tabs__link" href="about.html">关于</a>
       </div>
     </nav>
   </header>
 
-  <!-- ===== 主体 ===== -->
   <div class="md-container">
     <label class="md-overlay" id="overlay" for="drawerToggle" aria-hidden="true"></label>
 
-    <!-- 侧边导航 -->
     <aside class="md-sidebar" id="sidebar">
       <nav class="md-nav" aria-label="目录">
         <ul class="md-nav__list">
           <li class="md-nav__item">
-            <a class="md-nav__link is-active" href="#home">主页</a>
+            <a class="md-nav__link" href="index.html">主页</a>
           </li>
 
-          <li class="md-nav__item md-nav__item--section">
+          <li class="md-nav__item">
             <span class="md-nav__label">课程作业</span>
             <ul class="md-nav__list">
               <li class="md-nav__item md-nav__item--nested is-open">
@@ -68,12 +65,12 @@
                   <svg class="md-nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
                 </button>
                 <ul class="md-nav__list">
-                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-osc">示波器的使用</a></li>
-                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-snd">声速测定</a></li>
-                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-fg">分光计的调整和使用</a></li>
-                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-gs">光栅衍射</a></li>
-              <li class="md-nav__item"><a class="md-nav__link" href="#exp-mul">万用表的设计</a></li>
-              <li class="md-nav__item"><a class="md-nav__link" href="#exp-tc">铁磁材料居里温度测量</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="courses.html#exp-osc">示波器的使用</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="courses.html#exp-snd">声速测定</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="courses.html#exp-fg">分光计的调整和使用</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="courses.html#exp-gs">光栅衍射</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="courses.html#exp-mul">万用表的设计</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="courses.html#exp-tc">铁磁材料居里温度测量</a></li>
                 </ul>
               </li>
               <li class="md-nav__item md-nav__item--nested is-open">
@@ -82,245 +79,44 @@
                   <svg class="md-nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
                 </button>
                 <ul class="md-nav__list">
-                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-dc">直流电压电流和电阻</a></li>
-                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-va">电路元件特性曲线</a></li>
-                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-src">含源一端口网络</a></li>
-                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-ac">交流无源一端口</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="courses.html#exp-dc">直流电压电流和电阻</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="courses.html#exp-va">电路元件特性曲线</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="courses.html#exp-src">含源一端口网络</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="courses.html#exp-ac">交流无源一端口</a></li>
                 </ul>
               </li>
-              <li class="md-nav__item">
-                <a class="md-nav__link" href="#ode">常微分方程</a>
-              </li>
-              <li class="md-nav__item">
-                <a class="md-nav__link" href="#chem">普通化学（乙）</a>
-              </li>
+              <li class="md-nav__item"><a class="md-nav__link" href="courses.html#ode">常微分方程</a></li>
+              <li class="md-nav__item"><a class="md-nav__link" href="courses.html#chem">普通化学（乙）</a></li>
             </ul>
           </li>
 
-          <li class="md-nav__item md-nav__item--section">
+          <li class="md-nav__item">
             <span class="md-nav__label">杂项收藏</span>
             <ul class="md-nav__list">
-              <li class="md-nav__item"><a class="md-nav__link" href="#furina">芙宁娜图集</a></li>
-              <li class="md-nav__item"><a class="md-nav__link" href="#snaps">随手拍</a></li>
+              <li class="md-nav__item"><a class="md-nav__link" href="misc.html#furina">芙宁娜图集</a></li>
+              <li class="md-nav__item"><a class="md-nav__link" href="misc.html#snaps">随手拍</a></li>
             </ul>
           </li>
 
-          <li class="md-nav__item md-nav__item--section">
+          <li class="md-nav__item">
             <span class="md-nav__label">关于</span>
             <ul class="md-nav__list">
-              <li class="md-nav__item"><a class="md-nav__link" href="#about">此库说明</a></li>
-              <li class="md-nav__item"><a class="md-nav__link" href="#contact">联系方式</a></li>
+              <li class="md-nav__item"><a class="md-nav__link" href="about.html">此库说明</a></li>
+              <li class="md-nav__item"><a class="md-nav__link" href="about.html#contact">联系方式</a></li>
             </ul>
           </li>
         </ul>
       </nav>
     </aside>
 
-    <!-- 内容区 -->
     <main class="md-content" id="content">
       <article class="md-content__inner">
-
-        <p class="md-notice">
-          ⚠️ 内容由 AI 生成或识别，请谨慎甄别，作者会在有空的时候审核（真能审核完吗？）
-        </p>
-
         <h1 id="home">躺平摸鱼日记</h1>
-        <p class="md-lead">
-          在蓝色大肥鱼的辅助（？）下搭建而成，仓库内容由大肥鱼识别我的课程内容生成，个人粗略审核，仅供参考。
-        </p>
+        <p class="md-lead">一个随手归档的地方：课程实验报告、几份笔记，还有攒下来的图和照片。</p>
 
-        <div class="md-stats">
-          <div class="md-stat">
-            <span class="md-stat__num">10</span>
-            <span class="md-stat__label">已归档遗物</span>
-          </div>
-          <div class="md-stat">
-            <span class="md-stat__num">4</span>
-            <span class="md-stat__label">课程分类</span>
-          </div>
-          <div class="md-stat">
-            <span class="md-stat__num">∞</span>
-            <span class="md-stat__label">摸过的鱼</span>
-          </div>
-        </div>
+        <p class="md-notice">⚠️ 内容由 AI 生成或识别，请谨慎甄别，作者会在有空的时候审核（真能审核完吗？）</p>
 
-        <h2 id="courses">课程作业<span class="md-anchor">#</span></h2>
-
-        <h3 id="physics">大学物理实验<span class="md-anchor">#</span></h3>
-        <p class="md-notice">为保护个人隐私，部分实验的原始数据记录（如手写草稿纸照片）已做遮蔽处理，内容可能不完整。</p>
-        <ul class="md-filelist">
-          <li id="exp-osc">
-            <span class="md-filelist__icon">📄</span>
-            <a href="files/示波器的使用.pdf" target="_blank" rel="noopener">示波器的使用（94分）</a>
-            <span class="md-filelist__meta">PDF</span>
-          </li>
-          <li id="exp-snd">
-            <span class="md-filelist__icon">📄</span>
-            <a href="files/声速测定.pdf" target="_blank" rel="noopener">声速测定（94分）</a>
-            <span class="md-filelist__meta">PDF</span>
-          </li>
-          <li class="md-comment-item">
-            <details class="md-comment">
-              <summary>教师评语 · 示波器的使用 + 声速测定</summary>
-              <div class="md-comment__body">
-                <p>报告应该二合一</p>
-                <p>1，示波器的测量结果准确，驻波法测量的声速相对误差大于 2%，扣 2 分</p>
-                <p>2，作图法求波长，进而求声速，与逐差法作比较呢？扣 2 分</p>
-                <p>报告整体（合在一起后）内容有欠丰富，但有的地方格式不够整齐，有的字接近重叠，有的字体加黑。扣 2 分</p>
-              </div>
-            </details>
-          </li>
-          <li id="exp-fg">
-            <span class="md-filelist__icon">📄</span>
-            <a href="files/分光计的调整和使用.pdf" target="_blank" rel="noopener">分光计的调整和使用（94分）</a>
-            <span class="md-filelist__meta">PDF</span>
-          </li>
-          <li id="exp-gs">
-            <span class="md-filelist__icon">📄</span>
-            <a href="files/光栅衍射.pdf" target="_blank" rel="noopener">光栅衍射（94分）</a>
-            <span class="md-filelist__meta">PDF</span>
-          </li>
-          <li class="md-comment-item">
-            <details class="md-comment">
-              <summary>教师评语 · 分光计的调整和使用 + 光栅衍射</summary>
-              <div class="md-comment__body">
-                <p>评语待补充</p>
-              </div>
-            </details>
-          </li>
-          <li id="exp-mul">
-            <span class="md-filelist__icon">📄</span>
-            <a href="files/万用表的设计.pdf" target="_blank" rel="noopener">万用表的设计（88分）</a>
-            <span class="md-filelist__meta">PDF</span>
-          </li>
-          <li class="md-comment-item">
-            <details class="md-comment">
-              <summary>教师评语 · 万用表的设计</summary>
-              <div class="md-comment__body">
-                <p>仪表等级未给出</p>
-              </div>
-            </details>
-          </li>
-          <li id="exp-tc">
-            <span class="md-filelist__icon">📄</span>
-            <a href="files/铁磁材料居里温度测量.pdf" target="_blank" rel="noopener">铁磁材料居里温度测量</a>
-            <span class="md-filelist__meta">PDF</span>
-          </li>
-        </ul>
-
-        <h3 id="modian">模拟电子技术实验<span class="md-anchor">#</span></h3>
-        <p class="md-notice">报告顶部的姓名、学号已做遮蔽处理；成绩按 5 分制记录。</p>
-
-        <ul class="md-filelist" id="modianList">
-          <li id="exp-dc">
-            <span class="md-filelist__icon">📄</span>
-            <a href="files/模电-直流电压电流和电阻的测量法.pdf" target="_blank" rel="noopener">直流电压电流和电阻的测量法（4.0/5）</a>
-            <span class="md-filelist__meta">PDF · 4 页</span>
-          </li>
-          <li class="md-comment-item">
-            <details class="md-comment">
-              <summary>教师评语 · 直流电压电流和电阻的测量法</summary>
-              <div class="md-comment__body">
-                <p>「五、实验数据记录和处理」被标了叉；验证 KCL 的数据表里 I₁ = 8.04 mA 也打了叉，批注：电压表内阻极大。</p>
-              </div>
-            </details>
-          </li>
-          <li id="exp-va">
-            <span class="md-filelist__icon">📄</span>
-            <a href="files/模电-电路元件特性曲线的伏安测量法和示波器观测法.pdf" target="_blank" rel="noopener">电路元件特性曲线的伏安测量法和示波器观测法（待评分）</a>
-            <span class="md-filelist__meta">PDF · 11 页</span>
-          </li>
-          <li id="exp-src">
-            <span class="md-filelist__icon">📄</span>
-            <a href="files/模电-含源一端口网络等效参数和外特性的测量.pdf" target="_blank" rel="noopener">含源一端口网络等效参数和外特性的测量（4.9/5）</a>
-            <span class="md-filelist__meta">PDF · 7 页</span>
-          </li>
-          <li class="md-comment-item">
-            <details class="md-comment">
-              <summary>教师评语 · 含源一端口网络等效参数和外特性的测量</summary>
-              <div class="md-comment__body">
-                <p>只标出一处笔误：开路电压写作 10.09Vm，批注「mV 写成 Vm」。</p>
-              </div>
-            </details>
-          </li>
-          <li id="exp-ac">
-            <span class="md-filelist__icon">📄</span>
-            <a href="files/模电-交流无源一端口电路等效参数的测量研究.pdf" target="_blank" rel="noopener">交流无源一端口电路等效参数的测量研究（待评分）</a>
-            <span class="md-filelist__meta">PDF · 9 页</span>
-          </li>
-        </ul>
-
-        <h3 id="ode">常微分方程（个人笔记）<span class="md-anchor">#</span></h3>
-        <ul class="md-filelist">
-          <li>
-            <span class="md-filelist__icon">📝</span>
-            <a href="note.html?f=notes/ode.md">在线阅读笔记</a>
-            <span class="md-filelist__meta">Markdown · 含公式</span>
-          </li>
-          <li>
-            <span class="md-filelist__icon">📄</span>
-            <a href="files/常微分方程笔记.pdf" target="_blank" rel="noopener">合订本 PDF</a>
-            <span class="md-filelist__meta">1.8 MB</span>
-          </li>
-        </ul>
-
-        <h3 id="chem">普通化学（乙）<span class="md-anchor">#</span></h3>
-        <p class="md-muted">资料慢慢补。</p>
-
-        <hr />
-
-        <h2 id="misc">杂项收藏<span class="md-anchor">#</span></h2>
-
-        <h3 id="furina">芙宁娜 · 收藏图集<span class="md-anchor">#</span></h3>
-        <p class="md-muted">枫丹水神的同人图收藏，共 9 张。</p>
-        <ul class="md-filelist">
-          <li>
-            <span class="md-filelist__icon">🖼️</span>
-            <a href="furina.html">进入图集</a>
-            <span class="md-filelist__meta">9 张 · 已压缩</span>
-          </li>
-        </ul>
-
-        <h3 id="snaps">随手拍<span class="md-anchor">#</span></h3>
-        <p class="md-muted">天空、花草、建筑，还有一只爱看窗外的小狗，共 37 张。</p>
-        <ul class="md-filelist">
-          <li>
-            <span class="md-filelist__icon">📷</span>
-            <a href="snaps.html">进入图集</a>
-            <span class="md-filelist__meta">37 张 · 已压缩</span>
-          </li>
-        </ul>
-
-        <hr />
-
-        <h2 id="about">关于<span class="md-anchor">#</span></h2>
-        <p>
-          这里陈列着我攒下的零碎，慢慢往里补。也许有一天它们会成为有用的「遗物」，也许不会——但至少，留痕了。
-        </p>
-
-
-        <table class="md-table">
-          <tbody>
-            <tr><th>档案性质</th><td>个人学习存档</td></tr>
-            <tr><th>当前状态</th><td>持续整理中</td></tr>
-            <tr><th>搭建方式</th><td>纯 HTML / CSS / JS</td></tr>
-          </tbody>
-        </table>
-
-        <h2 id="contact">联系方式<span class="md-anchor">#</span></h2>
-        <ul class="md-filelist">
-          <li>
-            <span class="md-filelist__icon">🐙</span>
-            <a href="https://github.com/LINGYUAN66524" target="_blank" rel="noopener">GitHub</a>
-            <span class="md-filelist__meta">github.com/LINGYUAN66524</span>
-          </li>
-          <li>
-            <span class="md-filelist__icon">✉️</span>
-            <a href="mailto:zbaohua@zju.edu.cn">邮箱</a>
-            <span class="md-filelist__meta">zbaohua@zju.edu.cn</span>
-          </li>
-        </ul>
-
+        <p>报告在「课程作业」，图集和随手拍在「杂项收藏」，站点的来由写在「关于」。资料慢慢补，不保证齐全。</p>
       </article>
 
       <footer class="md-footer">

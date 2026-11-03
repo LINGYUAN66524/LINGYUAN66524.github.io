@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>课程作业 · 躺平摸鱼日记</title>
+  <meta name="description" content="个人学习存档：课程实验报告、笔记与图集。" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script>
+    // 尽早套用主题，避免刷新闪白
+    (function () {
+      try {
+        var t = localStorage.getItem("relics-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <header class="md-header">
+    <div class="md-header__inner">
+      <button class="md-header__icon md-header__drawer" id="drawerToggle"
+              aria-label="打开导航" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      </button>
+
+      <a class="md-header__logo" href="index.html">
+        <span class="md-header__title">躺平摸鱼日记</span>
+      </a>
+
+      <span class="md-header__spacer"></span>
+
+      <button class="md-header__icon" id="themeToggle" aria-label="切换芒/荒" title="切换芒/荒">
+        <svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+        <svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.75 4.09l-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91l-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </button>
+    </div>
+
+    <nav class="md-tabs" aria-label="主导航">
+      <div class="md-tabs__inner">
+        <a class="md-tabs__link" href="index.html">主页</a>
+        <a class="md-tabs__link is-active" href="courses.html">课程作业</a>
+        <a class="md-tabs__link" href="misc.html">杂项收藏</a>
+        <a class="md-tabs__link" href="about.html">关于</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="md-container">
+    <label class="md-overlay" id="overlay" for="drawerToggle" aria-hidden="true"></label>
+
+    <aside class="md-sidebar" id="sidebar">
+      <nav class="md-nav" aria-label="目录">
+        <ul class="md-nav__list">
+          <li class="md-nav__item">
+            <a class="md-nav__link" href="index.html">主页</a>
+          </li>
+
+          <li class="md-nav__item">
+            <span class="md-nav__label">课程作业</span>
+            <ul class="md-nav__list">
+              <li class="md-nav__item md-nav__item--nested is-open">
+                <button class="md-nav__toggle" aria-expanded="true">
+                  <span>大学物理实验</span>
+                  <svg class="md-nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+                </button>
+                <ul class="md-nav__list">
+                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-osc">示波器的使用</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-snd">声速测定</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-fg">分光计的调整和使用</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-gs">光栅衍射</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-mul">万用表的设计</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-tc">铁磁材料居里温度测量</a></li>
+                </ul>
+              </li>
+              <li class="md-nav__item md-nav__item--nested is-open">
+                <button class="md-nav__toggle" aria-expanded="true">
+                  <span>模拟电子技术实验</span>
+                  <svg class="md-nav__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+                </button>
+                <ul class="md-nav__list">
+                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-dc">直流电压电流和电阻</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-va">电路元件特性曲线</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-src">含源一端口网络</a></li>
+                  <li class="md-nav__item"><a class="md-nav__link" href="#exp-ac">交流无源一端口</a></li>
+                </ul>
+              </li>
+              <li class="md-nav__item"><a class="md-nav__link" href="#ode">常微分方程</a></li>
+              <li class="md-nav__item"><a class="md-nav__link" href="#chem">普通化学（乙）</a></li>
+            </ul>
+          </li>
+
+          <li class="md-nav__item">
+            <span class="md-nav__label">杂项收藏</span>
+            <ul class="md-nav__list">
+              <li class="md-nav__item"><a class="md-nav__link" href="misc.html#furina">芙宁娜图集</a></li>
+              <li class="md-nav__item"><a class="md-nav__link" href="misc.html#snaps">随手拍</a></li>
+            </ul>
+          </li>
+
+          <li class="md-nav__item">
+            <span class="md-nav__label">关于</span>
+            <ul class="md-nav__list">
+              <li class="md-nav__item"><a class="md-nav__link" href="about.html">此库说明</a></li>
+              <li class="md-nav__item"><a class="md-nav__link" href="about.html#contact">联系方式</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="md-content" id="content">
+      <article class="md-content__inner">
+        <h2 id="physics">大学物理实验<span class="md-anchor">#</span></h2>
+        <p class="md-notice">为保护个人隐私，部分实验的原始数据记录（如手写草稿纸照片）已做遮蔽处理，内容可能不完整。</p>
+        <ul class="md-filelist">
+          <li id="exp-osc">
+            <span class="md-filelist__icon">📄</span>
+            <a href="files/示波器的使用.pdf" target="_blank" rel="noopener">示波器的使用（94分）</a>
+            <span class="md-filelist__meta">PDF</span>
+          </li>
+          <li id="exp-snd">
+            <span class="md-filelist__icon">📄</span>
+            <a href="files/声速测定.pdf" target="_blank" rel="noopener">声速测定（94分）</a>
+            <span class="md-filelist__meta">PDF</span>
+          </li>
+          <li class="md-comment-item">
+            <details class="md-comment">
+              <summary>教师评语 · 示波器的使用 + 声速测定</summary>
+              <div class="md-comment__body">
+                <p>报告应该二合一</p>
+                <p>1，示波器的测量结果准确，驻波法测量的声速相对误差大于 2%，扣 2 分</p>
+                <p>2，作图法求波长，进而求声速，与逐差法作比较呢？扣 2 分</p>
+                <p>报告整体（合在一起后）内容有欠丰富，但有的地方格式不够整齐，有的字接近重叠，有的字体加黑。扣 2 分</p>
+              </div>
+            </details>
+          </li>
+          <li id="exp-fg">
+            <span class="md-filelist__icon">📄</span>
+            <a href="files/分光计的调整和使用.pdf" target="_blank" rel="noopener">分光计的调整和使用（94分）</a>
+            <span class="md-filelist__meta">PDF</span>
+          </li>
+          <li id="exp-gs">
+            <span class="md-filelist__icon">📄</span>
+            <a href="files/光栅衍射.pdf" target="_blank" rel="noopener">光栅衍射（94分）</a>
+            <span class="md-filelist__meta">PDF</span>
+          </li>
+          <li class="md-comment-item">
+            <details class="md-comment">
+              <summary>教师评语 · 分光计的调整和使用 + 光栅衍射</summary>
+              <div class="md-comment__body">
+                <p>评语待补充</p>
+              </div>
+            </details>
+          </li>
+          <li id="exp-mul">
+            <span class="md-filelist__icon">📄</span>
+            <a href="files/万用表的设计.pdf" target="_blank" rel="noopener">万用表的设计（88分）</a>
+            <span class="md-filelist__meta">PDF</span>
+          </li>
+          <li class="md-comment-item">
+            <details class="md-comment">
+              <summary>教师评语 · 万用表的设计</summary>
+              <div class="md-comment__body">
+                <p>仪表等级未给出</p>
+              </div>
+            </details>
+          </li>
+          <li id="exp-tc">
+            <span class="md-filelist__icon">📄</span>
+            <a href="files/铁磁材料居里温度测量.pdf" target="_blank" rel="noopener">铁磁材料居里温度测量</a>
+            <span class="md-filelist__meta">PDF</span>
+          </li>
+        </ul>
+
+        <h2 id="modian">模拟电子技术实验<span class="md-anchor">#</span></h2>
+        <p class="md-notice">报告顶部的姓名、学号已做遮蔽处理；成绩按 5 分制记录。</p>
+        <ul class="md-filelist" id="modianList">
+          <li id="exp-dc">
+            <span class="md-filelist__icon">📄</span>
+            <a href="files/模电-直流电压电流和电阻的测量法.pdf" target="_blank" rel="noopener">直流电压电流和电阻的测量法（4.0/5）</a>
+            <span class="md-filelist__meta">PDF · 4 页</span>
+          </li>
+          <li class="md-comment-item">
+            <details class="md-comment">
+              <summary>教师评语 · 直流电压电流和电阻的测量法</summary>
+              <div class="md-comment__body">
+                <p>「五、实验数据记录和处理」被标了叉；验证 KCL 的数据表里 I₁ = 8.04 mA 也打了叉，批注：电压表内阻极大。</p>
+              </div>
+            </details>
+          </li>
+          <li id="exp-va">
+            <span class="md-filelist__icon">📄</span>
+            <a href="files/模电-电路元件特性曲线的伏安测量法和示波器观测法.pdf" target="_blank" rel="noopener">电路元件特性曲线的伏安测量法和示波器观测法（待评分）</a>
+            <span class="md-filelist__meta">PDF · 11 页</span>
+          </li>
+          <li id="exp-src">
+            <span class="md-filelist__icon">📄</span>
+            <a href="files/模电-含源一端口网络等效参数和外特性的测量.pdf" target="_blank" rel="noopener">含源一端口网络等效参数和外特性的测量（4.9/5）</a>
+            <span class="md-filelist__meta">PDF · 7 页</span>
+          </li>
+          <li class="md-comment-item">
+            <details class="md-comment">
+              <summary>教师评语 · 含源一端口网络等效参数和外特性的测量</summary>
+              <div class="md-comment__body">
+                <p>只标出一处笔误：开路电压写作 10.09Vm，批注「mV 写成 Vm」。</p>
+              </div>
+            </details>
+          </li>
+          <li id="exp-ac">
+            <span class="md-filelist__icon">📄</span>
+            <a href="files/模电-交流无源一端口电路等效参数的测量研究.pdf" target="_blank" rel="noopener">交流无源一端口电路等效参数的测量研究（待评分）</a>
+            <span class="md-filelist__meta">PDF · 9 页</span>
+          </li>
+        </ul>
+
+        <h2 id="ode">常微分方程（个人笔记）<span class="md-anchor">#</span></h2>
+        <ul class="md-filelist">
+          <li>
+            <span class="md-filelist__icon">📝</span>
+            <a href="note.html?f=notes/ode.md">在线阅读笔记</a>
+            <span class="md-filelist__meta">Markdown · 含公式</span>
+          </li>
+          <li>
+            <span class="md-filelist__icon">📄</span>
+            <a href="files/常微分方程笔记.pdf" target="_blank" rel="noopener">合订本 PDF</a>
+            <span class="md-filelist__meta">1.8 MB</span>
+          </li>
+        </ul>
+
+        <h2 id="chem">普通化学（乙）<span class="md-anchor">#</span></h2>
+        <p class="md-muted">资料慢慢补。</p>
+      </article>
+
+      <footer class="md-footer">
+        <p>躺平摸鱼日记 · 躺平，但留痕。</p>
+        <p class="md-footer__meta">
+          © <span id="year">2026</span> LINGYUAN66524 · 最后更新：<span id="updated">--</span>
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <button class="md-top" id="backTop" aria-label="回到顶部">↑</button>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

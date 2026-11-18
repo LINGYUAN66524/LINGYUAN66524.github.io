@@ -165,6 +165,7 @@
     "exp-tc": "courses",
     "exp-hys": "courses",
     "exp-young": "courses",
+    "exp-young2": "courses",
     "exp-rc": "courses",
     "exp-rect": "courses",
     furina: "misc",
